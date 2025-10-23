@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Dream Book</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5; /* soft lavender/pink */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Login styles */
+        #login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .login-box h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #f06292;
+        }
+        .login-box input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #f06292;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .login-box button {
+            width: 95%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            background-color: #f06292;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .login-box button:hover {
+            background-color: #ec407a;
+        }
+
+        /* Story styles */
+        #story-container {
+            display: none; /* hidden at first */
+            padding: 20px;
+        }
+        header {
+            background-color: #f8bbd0;
+            padding: 30px;
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .chapter {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .chapter h2 {
+            color: #f06292;
+            margin-bottom: 15px;
+        }
+        .chapter p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div id="login-container">
+        <div class="login-box">
+            <h1>Our Dream Book</h1>
+            <input type="text" placeholder="Username" id="username"><br>
+            <input type="password" placeholder="Password" id="password"><br>
+            <button onclick="login()">Enter</button>
+        </div>
+    </div>
+
+    <!-- Story Section -->
+    <div id="story-container">
+        <header>Our Dream Book</header>
+
+        <!-- Chapter 1 -->
+        <div class="chapter">
+            <h2>Chapter 1: Where We Met</h2>
+            <p>It all started in college. We saw each other across the hallways, exchanged smiles, and shared classes. Something about our connection felt different, yet we never confessed our feelings.</p>
+            <p>Even though we liked each other, neither of us was ready for a relationship. We became good friends, enjoying small moments and conversations that slowly made our bond stronger.</p>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter">
+            <h2>Chapter 2: Graduation & First Date</h2>
+            <p>After graduation, life started taking shape. We both found our paths, and finally, the courage to be together. Our first date was simple but magical, filled with laughter and dreams for the future.</p>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter">
+            <h2>Chapter 3: Dimapur Life</h2>
+            <p>We both got jobs in Dimapur and started living in a rented apartment. Our days were filled with new routines, work challenges, and cozy evenings spent together. Every small moment became a cherished memory.</p>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter">
+            <h2>Chapter 4: Our Special Times</h2>
+            <p>We explored the city, cooked together, watched sunsets, and laughed at silly things. These were the little moments that built the foundation of our love—a love that grew stronger every day.</p>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter">
+            <h2>Chapter 5: Meeting Families & Marriage</h2>
+            <p>After a while, we introduced each other to our families. Their blessings made our love feel even more real. And finally, surrounded by loved ones, we tied the knot and began our forever together.</p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if(user === "Ayang and Wapang" && pass === "Ayang") {
+                alert("Welcome to Our Dream Book 💖");
+                // Hide login and show story
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('story-container').style.display = 'block';
+            } else {
+                alert("Invalid Username or Password!");
+            }
+        }
+    </script>
+</body>
+</html>
